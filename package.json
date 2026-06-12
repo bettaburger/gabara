@@ -1,8 +1,8 @@
 {
   "name": "gabara-frontend",
   "scripts": {
-    "build": "npx @tailwindcss/cli -i ./src/styles.css -o ./public/styles.css",
-    "watch": "npx @tailwindcss/cli -w -i ./src/styles.css -o ./public/styles.css"
+    "build": "npx @tailwindcss/cli -i ./static/styles.css -o ./web/app/styles.css",
+    "watch": "npx @tailwindcss/cli -w -i ./static/styles.css -o ./web/app/public/styles.css"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.0",
