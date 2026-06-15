@@ -17,6 +17,7 @@ async function getToken(code) {
     },
     body,
   });
+  console.log("REDIRECT URI SENT:", redirectUri);
   const data = await response.json();
   console.log("TOKEN:", data);
   window.localStorage.setItem("access_token", data.access_token);
