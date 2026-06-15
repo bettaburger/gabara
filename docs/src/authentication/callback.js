@@ -1,5 +1,5 @@
 const clientId = "105507cca7d448d7a4f7ce2108cc5f37";
-const redirectUri = "'https://bettaburger.github.io/gabara/docs/callback.html'";
+const redirectUri = "https://bettaburger.github.io/gabara/callback.html";
 
 async function getToken(code) {
   const codeVerifier = localStorage.getItem("code_verifier");
