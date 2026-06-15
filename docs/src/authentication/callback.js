@@ -3,7 +3,6 @@ const redirectUri = "'https://bettaburger.github.io/gabara/docs/callback.html'";
 
 async function getToken(code) {
   const codeVerifier = localStorage.getItem("code_verifier");
-
   const body = new URLSearchParams({
     client_id: clientId,
     grant_type: "authorization_code",
@@ -11,7 +10,6 @@ async function getToken(code) {
     redirect_uri: redirectUri,
     code_verifier: codeVerifier,
   });
-
   const response = await fetch("https://accounts.spotify.com/api/token", {
     method: "POST",
     headers: {
@@ -19,15 +17,12 @@ async function getToken(code) {
     },
     body,
   });
-
   const data = await response.json();
   console.log("TOKEN:", data);
-
-  localStorage.setItem("access_token", data.access_token);
+  window.localStorage.setItem("access_token", data.access_token);
 }
-
-const params = new URLSearchParams(window.location.search);
-const code = params.get("code");
+const urlParams = new URLSearchParams(window.location.search);
+let code = urlParams.get("code");
 
 if (code) {
   getToken(code);
