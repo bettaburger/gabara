@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Spotify Callback</title>
+  <title>Spotify Callback Page</title>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <p>Logging you in...</p>
-  <script src="src/authentication/pkce.js"></script>
-  <script src="src/authentication/callback.js"></script>
+<body class="bg-mauve-900">
+  <div class="archivo-black-regular h-screen flex flex-col justify-center pl-10 gap-6 p-7">
+    <h1 class="fadeInUp-animation text-9xl font-medium text-mauve-500 underline">Gabara</h1>
+    <h1 class="fadeInUp-animation text-5xl font-medium text-green-500">Your Spotify is connected</h1>
+    <button id="goToHomePage" class="fadeInUp-animation flex justify-start text-3xl text-mauve-300 hover:text-mauve-500 transition-colors duration-200 ease-in-200">Click here to start writing</button>
+  </div>
+  <script>
+    document.getElementById("goToHomePage").onclick = function() {
+      window.location.href="home.html";
+    };
+  </script>
 </body>
 </html>

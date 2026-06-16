@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+.archivo-black-regular {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*front page animation*/
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.fadeInUp-animation {
+  animation: 1s fadeInUp;
+}
